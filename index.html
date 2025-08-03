@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피타고라스 정리 시뮬레이션</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>피타고라스 정리 시뮬레이션</h1>
+            <p>직각삼각형의 세 변의 길이를 조절하여 a² + b² = c² 관계를 확인해보세요!</p>
+        </header>
+
+        <div class="simulation-container">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="sideA">변 a (밑변):</label>
+                    <input type="range" id="sideA" min="3" max="8" value="3" step="0.1">
+                    <span id="sideAValue">3.0</span>
+                </div>
+                <div class="control-group">
+                    <label for="sideB">변 b (높이):</label>
+                    <input type="range" id="sideB" min="3" max="8" value="4" step="0.1">
+                    <span id="sideBValue">4.0</span>
+                </div>
+                <div class="control-group">
+                    <label for="sideC">변 c (빗변):</label>
+                    <input type="range" id="sideC" min="3" max="12" value="5" step="0.1">
+                    <span id="sideCValue">5.0</span>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="triangleCanvas" width="600" height="400"></canvas>
+            </div>
+
+            <div class="formula-display">
+                <div class="formula">
+                    <h3>피타고라스 정리</h3>
+                    <div class="equation">
+                        <span id="formulaA">a²</span> + <span id="formulaB">b²</span> = <span id="formulaC">c²</span>
+                    </div>
+                    <div class="calculation">
+                        <span id="calcA">9</span> + <span id="calcB">16</span> = <span id="calcC">25</span>
+                    </div>
+                    <div class="result" id="result">
+                        ✓ 피타고라스 정리가 성립합니다!
+                    </div>
+                </div>
+            </div>
+
+            <div class="squares-display">
+                <div class="square-info">
+                    <div class="square a-square">
+                        <div class="square-label">a² = <span id="squareA">9</span></div>
+                    </div>
+                    <div class="square b-square">
+                        <div class="square-label">b² = <span id="squareB">16</span></div>
+                    </div>
+                    <div class="square c-square">
+                        <div class="square-label">c² = <span id="squareC">25</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <h3>피타고라스 정리란?</h3>
+            <p>직각삼각형에서 빗변의 제곱은 다른 두 변의 제곱의 합과 같습니다.</p>
+            <p><strong>공식:</strong> a² + b² = c²</p>
+            <p>여기서 c는 빗변(가장 긴 변), a와 b는 나머지 두 변입니다.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
